@@ -5,14 +5,14 @@
 package mascotapp.entidades;
 
 import java.util.Objects;
-import mascotapp.enumeraciones.Raza;
+import mascotapp.enumeraciones.RazaPerruna;
 import mascotapp.enumeraciones.SexoAnimal;
 
 /**
  *
  * @author JCarlos
  */
-public class Mascota implements Comparable<Mascota> {
+public class Mascota <T> implements Comparable<Mascota> {
     
     private String apodo;
     private String tipo;
@@ -20,7 +20,7 @@ public class Mascota implements Comparable<Mascota> {
     private String color;
     private Integer edad;
     private boolean cola;
-    private Raza raza;
+    private T raza;
     private SexoAnimal sexo;
     
     
@@ -84,14 +84,15 @@ public class Mascota implements Comparable<Mascota> {
         this.cola = cola;
     }
 
-    public Raza getRaza() {
+    public T getRaza() {
         return raza;
     }
 
-    public void setRaza(Raza raza) {
+    public void setRaza(T raza) {
         this.raza = raza;
     }
 
+  
     public SexoAnimal getSexo() {
         return sexo;
     }
@@ -160,14 +161,14 @@ public class Mascota implements Comparable<Mascota> {
         }
         return Objects.equals(this.edad, other.edad);
     }
-    
-    
 
     @Override
     public String toString() {
-        return "Mascota{" + "apodo=" + apodo + ", tipo=" + tipo + ", nombre=" + nombre + ", color=" + color + ", edad=" + edad + ", cola=" + cola + ", raza=" + raza + '}';
+        return "Mascota{" + "apodo=" + apodo + ", tipo=" + tipo + ", nombre=" + nombre + ", color=" + color + ", edad=" + edad + ", cola=" + cola + ", raza=" + raza + ", sexo=" + sexo + ", energia=" + energia + '}';
     }
     
+    
+
 
     @Override
     public int compareTo(Mascota o) {

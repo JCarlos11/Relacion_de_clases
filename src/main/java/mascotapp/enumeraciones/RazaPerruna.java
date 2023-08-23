@@ -8,7 +8,7 @@ package mascotapp.enumeraciones;
  *
  * @author JCarlos
  */
-public enum Raza {
+public enum RazaPerruna {
  //SE les puede asignar distintos atributos a cada enumeracion 
     //EJEMPLO
 
@@ -17,7 +17,7 @@ public enum Raza {
   private Integer codigo;
   private String valor;
 
-    private Raza(Integer codigo, String valor) {
+    private RazaPerruna(Integer codigo, String valor) {
         this.codigo = codigo;
         this.valor = valor;
     }

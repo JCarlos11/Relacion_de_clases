@@ -4,8 +4,10 @@
 
 package com.mycompany.mascotaapp;
 
+import mascotapp.entidades.Mascota;
 import mascotapp.entidades.Usuario;
-import mascotapp.enumeraciones.Raza;
+import mascotapp.enumeraciones.RazaGatuna;
+import mascotapp.enumeraciones.RazaPerruna;
 import mascotapp.enumeraciones.SexoHumano;
 
 
@@ -17,19 +19,12 @@ public class MascotaAPP {
 
     public static void main(String[] args) {
         
-        Usuario u = new Usuario();
-        
-        u.setSexo(SexoHumano.HOMBRE);
-        
-//        String razaInput = "BEAGLE";
-//        
-//        for (Raza aux : Raza.values()) {
-//            if (aux.toString().equals(razaInput)) {
-//                System.out.println("Raza input es igual al enum: " + aux);
-//            }
-//         
-//        }
-        
- 
+      Mascota m1 = new Mascota<RazaPerruna>("Fer", "Chiquito", "Perro");
+      m1.setRaza(RazaPerruna.BEAGLE);
+      System.out.println(m1.toString());
+      
+      Mascota m2 = new Mascota<RazaGatuna>("Pepa", "Lola", "Gato");
+      m2.setRaza(RazaGatuna.NARANJOSO);
+      System.out.println(m2.toString());
     }
 }
