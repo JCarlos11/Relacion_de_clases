@@ -8,6 +8,6 @@ package mascotapp.enumeraciones;
  *
  * @author JCarlos
  */
-public class SexoAnimal {
-    
+public enum SexoAnimal {
+    MACHO, HEMBRA;
 }

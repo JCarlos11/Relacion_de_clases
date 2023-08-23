@@ -8,10 +8,7 @@ package mascotapp.enumeraciones;
  *
  * @author JCarlos
  */
-public class SexoHumano {
+public enum SexoHumano {
 
-    public SexoHumano() {
-    }
-    
-    
+    HOMBRE, MUJER, OTRO;
 }

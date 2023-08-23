@@ -8,11 +8,36 @@ package mascotapp.enumeraciones;
  *
  * @author JCarlos
  */
-public class Raza {
+public enum Raza {
+ //SE les puede asignar distintos atributos a cada enumeracion 
+    //EJEMPLO
 
-    public Raza() {
+   BEAGLE(123, "Beagle"), COCKER(345,"Cocker"), PITBULL(678, "Pitbull"), BORDER_COLLIE(91011, "Border Collie");
+   
+  private Integer codigo;
+  private String valor;
+
+    private Raza(Integer codigo, String valor) {
+        this.codigo = codigo;
+        this.valor = valor;
     }
-    
-    
-    
+
+    public Integer getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(Integer codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getValor() {
+        return valor;
+    }
+
+    public void setValor(String valor) {
+        this.valor = valor;
+    }
+  
+ 
+   
 }
